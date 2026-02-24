@@ -1,8 +1,16 @@
 *** Settings ***
-Library    SeleniumLibrary
-
+Library     SeleniumLibrary
+Resource    ../Resources/common_keywords.robot
 *** Test Cases ***
-Open Login Page
-    Open Browser    https://practicetestautomation.com/practice-test-login/    chrome
-    Sleep    3s
-    Close Browser
+Login Test
+    Open Login Page
+    Login
+    Page Should Contain    Congratulations
+    [Teardown]    Close Browser
+
+Logout Test
+    Open Login Page
+    Login
+    Logout
+    Page Should Contain    Test login
+    [Teardown]    Close Browser
