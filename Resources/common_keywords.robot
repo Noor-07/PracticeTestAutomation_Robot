@@ -16,5 +16,10 @@ Login
     Input Text      ${PASSWORD_FIELD}    Password123
     Click Element   ${LOGIN_FIELD}
 
+Negetive Username
+    Input Text      ${USERNAME_FIELD}    incorrectUser
+    Input Text      ${PASSWORD_FIELD}    Password123
+    Click Element   ${LOGIN_FIELD}
+
 Logout
     Click Element   ${LOGOUT_FIELD}
