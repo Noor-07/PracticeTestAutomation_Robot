@@ -21,5 +21,9 @@ Negetive Username
     Input Text      ${PASSWORD_FIELD}    Password123
     Click Element   ${LOGIN_FIELD}
 
+Negetive Password
+    Input Text      ${USERNAME_FIELD}    student
+    Input Text      ${PASSWORD_FIELD}    incorrectPassword
+    Click Element   ${LOGIN_FIELD}
 Logout
     Click Element   ${LOGOUT_FIELD}
